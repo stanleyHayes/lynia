@@ -1,11 +1,15 @@
 import React from 'react'
 import {Card, CardMedia, Button, CardContent, Typography, CardActions, Divider} from "@material-ui/core";
+import {Link} from "react-router-dom"
+
+
 
 import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     card: {
-        maxWidth: 350
+        maxWidth: 350,
+        margin:4
     }
 });
 
@@ -19,7 +23,7 @@ function TokenCard(props){
                 <Divider />
             <CardContent>
                 <Typography component="h2" variant="h5">
-                    Holiday Inn
+                    {props.name}
                 </Typography>
                 <Typography component="h2" variant="body1">
                     GHS 500
@@ -30,9 +34,17 @@ function TokenCard(props){
             </CardContent>
             <Divider />
             <CardActions>
-                <Button variant="small" color="primary">
-                    View detail
-                </Button>
+
+                <Link to={{
+                    pathname: '/token',
+                    search: '?sort=name',
+                    hash: '#the-hash',
+                    state: { token: props.name }
+                }}>
+                    <Button variant="small" color="primary">
+                        View detail
+                    </Button>
+                </Link>
 
                 <Button variant="small" color="primary">
                     Buy token

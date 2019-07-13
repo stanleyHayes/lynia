@@ -52,7 +52,7 @@ export const TokenDetail = (props) => {
 
                        </div>
                        <div style={{display:'flex', flexDirection:'column', alignItems :'flex-start'}}>
-                           <strong style={{fontSize:18, color:'teal'}} >Owner</strong>
+                           <strong style={{fontSize:18, color:'teal'}} >{props.active}</strong>
                            <span>Time created</span>
                        </div>
 

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 
 
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {fade, makeStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -21,17 +21,21 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import { TokenDetail } from "../components/TokenDetail"
 import {colors} from "../utils/colors";
+import RelatedToken from "../components/RelatedToken"
 
 
-const drawerWidth = 240;
+const drawerWidth = 260;
 
 export  const TokensPage = (props) =>{
 
 
+    let { state } = props.location;
+    console.log(state.token);
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState("Inbox");
+    const [relatedToken,  setRelatedToken] = useState("Related Token");
 
     useEffect(()=>{
 
@@ -48,11 +52,11 @@ export  const TokensPage = (props) =>{
 
     return(
         <div className={classes.root}>
-            {/*<CssBaseline />*/}
+            <CssBaseline />
             {/*<AppBar position="fixed" className={classes.appBar}>*/}
                 {/*<Toolbar>*/}
-                    {/*<Typography variant="h5" noWrap>*/}
-                        {/*Related Tokens - {active}*/}
+                    {/*<Typography variant="h6" noWrap>*/}
+                        {/*Clipped drawer*/}
                     {/*</Typography>*/}
                 {/*</Toolbar>*/}
             {/*</AppBar>*/}
@@ -62,31 +66,16 @@ export  const TokensPage = (props) =>{
                 classes={{
                     paper: classes.drawerPaper,
                 }}
-                anchor="left"
             >
-                <h2 style={{color:colors.header}}>{active}</h2>
-                <Divider/>
-                <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts','All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem
-                            onClick={()=>setActive(text)}
-                            style={{
-                                backgroundColor:active === text ? 'gainsboro' :'white',
-                                color:active === text ? 'teal' :'gray'
-                            }}
-                            button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
+                <RelatedToken  setRelatedToken={setActive}/>
+
 
             </Drawer>
-
             <main className={classes.content}>
 
-                <TokenDetail active={active}/>
+                <TokenDetail active={active} token={state.token}/>
             </main>
+
         </div>
 
     )
@@ -101,26 +90,83 @@ const useStyles = makeStyles(theme => ({
         flex:1
     },
     appBar: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
-        backgroundColor: 'teal'
+        zIndex: theme.zIndex.drawer + 1,
     },
     drawer: {
         width: drawerWidth,
-        flexShrink: 0,
+        overflowY:'scroll'
     },
     drawerPaper: {
         width: drawerWidth,
     },
-    toolbar: theme.mixins.toolbar,
     content: {
         flexGrow: 1,
-        paddingTop: theme.spacing(0),
-        width: `calc(100% - ${drawerWidth}px)`
     },
-    listitem:{
-        backgroundColor: 'yellow'
-    }
+    toolbar: theme.mixins.toolbar,
+
+    grow: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        display: 'none',
+        [theme.breakpoints.up('sm')]: {
+            display: 'block',
+        },
+    },
+    search: {
+        position: 'relative',
+        borderRadius: theme.shape.borderRadius,
+        backgroundColor: fade(theme.palette.common.white, 0.15),
+        '&:hover': {
+            backgroundColor: fade(theme.palette.common.white, 0.25),
+        },
+        marginRight: theme.spacing(2),
+        marginLeft: 0,
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: theme.spacing(3),
+            width: 'auto',
+        },
+    },
+    searchIcon: {
+        width: theme.spacing(7),
+        height: '100%',
+        position: 'absolute',
+        pointerEvents: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    inputRoot: {
+        color: 'inherit',
+    },
+    inputInput: {
+        padding: theme.spacing(1, 1, 1, 7),
+        transition: theme.transitions.create('width'),
+        width: '100%',
+        [theme.breakpoints.up('md')]: {
+            width: 200,
+        },
+    },
+    sectionDesktop: {
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'flex',
+        },
+    },
+    sectionMobile: {
+        display: 'flex',
+        [theme.breakpoints.up('md')]: {
+            display: 'none',
+        },
+    },
 }));
+
+
+
+
 
 

@@ -18,6 +18,7 @@ import LoginPage from "../src/pages/Login"
 import RegisterComponent  from "../src/pages/Register"
 import {TokensPage} from "../src/pages/Tokens"
 import CreateToken from './components/CreateToken';
+import MainPage from "../src/pages/MainPage"
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/register"  component={RegisterComponent}/>
           <Route path="/token"  component={TokensPage}/>
           <Route path="/tokens/create" component={CreateToken} />
+          <Route path="/mainpage" component={MainPage} />
 
       </Router>
       
