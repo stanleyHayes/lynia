@@ -1,9 +1,28 @@
 import React, {useState} from "react"
 import taken from "../../src/assets/images/mediaplayer.svg"
 import {colors} from "../utils/colors";
-
+import Avatar from '@material-ui/core/Avatar';
+import Chip from '@material-ui/core/Chip';
+import FaceIcon from '@material-ui/icons/Face';
+import DoneIcon from '@material-ui/icons/Done';
+import {makeStyles} from "@material-ui/core";
+import {getRandomColor} from "../utils/functions";
 
 export const TokenDetail = (props) => {
+
+
+
+
+
+    const classes = useStyles();
+
+    function handleDelete() {
+        alert('You clicked the delete icon.');
+    }
+
+    function handleClick() {
+        alert('You clicked the Chip.');
+    }
 
     return(
         <div style={{display:'flex',backgroundColor:'ghostwhite', flexDirection:'column',flex:1}}>
@@ -24,7 +43,7 @@ export const TokenDetail = (props) => {
                    <div style={{
                        display:'flex',
                        height:80,
-                       backgroundColor:'rgba(200,200,200,0.8)',
+                       backgroundColor:'rgba(20,20,20,0.2)',
                        alignItems:'center',
                        paddingLeft:32,
                        flexDirection:'row'
@@ -33,7 +52,7 @@ export const TokenDetail = (props) => {
 
                        </div>
                        <div style={{display:'flex', flexDirection:'column', alignItems :'flex-start'}}>
-                           <strong style={{fontSize:18}} >Owner</strong>
+                           <strong style={{fontSize:18, color:'teal'}} >Owner</strong>
                            <span>Time created</span>
                        </div>
 
@@ -47,6 +66,7 @@ export const TokenDetail = (props) => {
 
                     <div style={{...styles.container}}>
                         <span style={styles.item_header}>Type</span>
+                        <div className={classes.type}>{"This div's text looks like that of a button."}</div>
                     </div>
 
 
@@ -61,6 +81,25 @@ export const TokenDetail = (props) => {
 
                     <div style={{...styles.container}}>
                         <span style={styles.item_header}>Add Ons</span>
+                        <div style={{height:'100%', width:'100%' }}>
+                            <Chip
+                                avatar={<Avatar alt="Natacha" src="https://material-ui.com/static/images/cards/contemplative-reptile.jpg" />}
+                                label="Transport"
+                                className={classes.chip}
+                            />
+
+                            <Chip
+                                avatar={<Avatar alt="Natacha" src="https://material-ui.com/static/images/cards/contemplative-reptile.jpg" />}
+                                label="Deletable Chip"
+                                className={classes.chip}
+                            />
+
+                            <Chip
+                                avatar={<Avatar alt="Natacha" src="https://material-ui.com/static/images/cards/contemplative-reptile.jpg" />}
+                                label="Breakfast"
+                                className={classes.chip}
+                            />
+                        </div>
                     </div>
 
 
@@ -159,10 +198,31 @@ const styles = {
         border:'1px solid gainsboro',
         borderRadius:8,
         padding:8,
+        flexDirection:'column'
 
     },
     item_header:{
         color:colors.header,
         fontWeight:'bold'
     }
-}
+};
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+    },
+    chip: {
+        margin: theme.spacing(1),
+        color:'white',
+        backgroundColor:getRandomColor(),
+    },
+
+    type: {
+        ...theme.typography.button,
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(1),
+        textAlign:'center'
+    },
+}));
