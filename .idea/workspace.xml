@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed7e47b-ddd3-4982-9eff-a47e345157d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mediaplayer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/taken.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Tokens.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TokenDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TokenDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CreateToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateToken.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +21,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="14" />
+          <entry key="js" value="16" />
           <entry key="json" value="1" />
           <entry key="jsx" value="3" />
           <entry key="rnc" value="1" />
@@ -37,7 +33,7 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="JSX Harmony" value="3" />
-          <entry key="JavaScript" value="14" />
+          <entry key="JavaScript" value="16" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RNG Compact" value="1" />
           <entry key="SVG" value="2" />
@@ -45,7 +41,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="3364" />
+          <entry key="js" value="3373" />
           <entry key="json" value="1" />
           <entry key="jsx" value="804" />
           <entry key="vmoptions" value="4" />
@@ -55,7 +51,7 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="JSX Harmony" value="804" />
-          <entry key="JavaScript" value="3364" />
+          <entry key="JavaScript" value="3373" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -68,7 +64,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Tokens.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -101,6 +97,28 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="32" column="37" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#505#547#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/CreateToken.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-90">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -122,9 +140,9 @@
         <option value="$PROJECT_DIR$/src/components/Register.js" />
         <option value="$PROJECT_DIR$/src/components/Login.js" />
         <option value="$PROJECT_DIR$/src/pages/Tokens.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/TokenDetail.js" />
         <option value="$PROJECT_DIR$/src/pages/Tokens.jsx" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -235,12 +253,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562977527866</updated>
-      <workItem from="1562977539259" duration="20262000" />
+      <workItem from="1562977539259" duration="21045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20262000" />
+    <option name="totallyTimeSpent" value="21045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="708" extended-state="6" />
@@ -249,13 +267,13 @@
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2473525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2473525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="RNConsole" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.26455906" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.484193" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Run emulator out" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -332,17 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#505#547#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/structural.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -379,6 +386,24 @@
           <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CreateToken.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#505#547#0" expanded="true" />
           </folding>
         </state>
       </provider>

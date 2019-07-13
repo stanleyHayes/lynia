@@ -17,6 +17,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import LoginPage from "../src/pages/Login"
 import RegisterComponent  from "../src/pages/Register"
 import {TokensPage} from "../src/pages/Tokens"
+import CreateToken from './components/CreateToken';
+
 
 
 function App() {
@@ -28,7 +30,7 @@ function App() {
           <Route path="/login"   component={LoginPage}/>
           <Route path="/register"  component={RegisterComponent}/>
           <Route path="/token"  component={TokensPage}/>
-
+          <Route path="/tokens/create" component={CreateToken} />
 
       </Router>
       
