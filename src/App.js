@@ -8,10 +8,27 @@ import RelatedToken from './components/RelatedToken';
 import AccountDetail from './components/AccountDetail';
 import SidebarItem from './components/SidebarItem';
 
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+
+
+
+// Pages Import
+import LoginPage from "../src/pages/Login"
+import RegisterComponent  from "../src/pages/Register"
+
+
+
 function App() {
   return (
     <div className="App">
-      <RelatedToken />
+
+      <Router>
+          <Route path="/"/>
+          <Route path="/login"   component={LoginPage}/>
+          <Route path="/register"  component={RegisterComponent}/>
+      </Router>
+      
     </div>
   );
 }
