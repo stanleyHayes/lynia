@@ -16,7 +16,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // Pages Import
 import LoginPage from "../src/pages/Login"
 import RegisterComponent  from "../src/pages/Register"
-
+import {TokensPage} from "../src/pages/Tokens"
 
 
 function App() {
@@ -27,6 +27,9 @@ function App() {
           <Route path="/"/>
           <Route path="/login"   component={LoginPage}/>
           <Route path="/register"  component={RegisterComponent}/>
+          <Route path="/token"  component={TokensPage}/>
+
+
       </Router>
       
     </div>
