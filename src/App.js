@@ -16,6 +16,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // Pages Import
 import LoginPage from "../src/pages/Login"
 import RegisterComponent  from "../src/pages/Register"
+import CreateToken from './components/CreateToken';
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/"/>
           <Route path="/login"   component={LoginPage}/>
           <Route path="/register"  component={RegisterComponent}/>
+          <Route path="/tokens/create" component={CreateToken} />
       </Router>
       
     </div>
